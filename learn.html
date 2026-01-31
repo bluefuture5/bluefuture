@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Blue Future</title>
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/learn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+
+<body>
+    <!-- Navigation (loaded dynamically via includes.js) -->
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Learn About Water</h1>
+            <p>Understanding water scarcity, conservation, and solutions</p>
+        </div>
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Engaging Hook Section -->
+    <section class="learning-hook">
+        <div class="hook-background">
+            <div class="wave-1"></div>
+            <div class="wave-2"></div>
+            <div class="wave-3"></div>
+        </div>
+        <div class="container">
+            <div class="hook-content">
+                <div class="hook-icon pulse">💧</div>
+                <h2 class="hook-title">Did You Know?</h2>
+                <p class="hook-fact">1 in 4 people lack access to safe drinking water, yet we waste 30% of the world's
+                    fresh water supply.</p>
+                <p class="hook-subtitle">Your water choices matter. Let's change that together.</p>
+                <button class="btn btn-primary scroll-to-section" data-target="learning-section">Discover
+                    Solutions</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Basics Section -->
+    <section class="learning-section" id="learning-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Foundation</span>
+                <h2 class="section-title">Water Fundamentals</h2>
+                <p class="section-subtitle">Discover the essential facts about water globally and in Egypt</p>
+            </div>
+
+            <div class="facts-grid">
+                <!-- Card 1: Global Water Facts -->
+                <div class="learn-card card-1">
+                    <div class="card-header">
+                        <div class="card-icon">🌍</div>
+                        <h3>Global Water Facts</h3>
+                    </div>
+                    <ul class="facts-list">
+                        <li><span class="fact-number">97%</span> of Earth's water is salt water</li>
+                        <li><span class="fact-number">3%</span> is freshwater only</li>
+                        <li><span class="fact-number">2.5B</span> people in water-stressed areas</li>
+                        <li><span class="fact-number">1 in 4</span> lack safe drinking water</li>
+                    </ul>
+                    <div class="card-accent"></div>
+                </div>
+
+                <!-- Card 2: Egypt's Water Challenge -->
+                <div class="learn-card card-2">
+                    <div class="card-header">
+                        <div class="card-icon">🏜️</div>
+                        <h3>Egypt's Challenge</h3>
+                    </div>
+                    <ul class="facts-list">
+                        <li><span class="fact-number">90%</span> from the Nile River</li>
+                        <li><span class="fact-number">140M</span> people by 2050</li>
+                        <li><span class="fact-number">1,200</span> m³ per person/year</li>
+                        <li><span class="fact-number">#1</span> water scarcity threat</li>
+                    </ul>
+                    <div class="card-accent"></div>
+                </div>
+
+                <!-- Card 3: Impact Stats -->
+                <div class="learn-card card-3">
+                    <div class="card-header">
+                        <div class="card-icon">📊</div>
+                        <h3>The Impact</h3>
+                    </div>
+                    <ul class="facts-list">
+                        <li><span class="fact-number">30%</span> of water wasted globally</li>
+                        <li><span class="fact-number">4.2B</span> people water-deprived</li>
+                        <li><span class="fact-number">2025</span> deadline to act</li>
+                        <li><span class="fact-number">∞</span> solutions available</li>
+                    </ul>
+                    <div class="card-accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data & Learn Hub -->
+    <section class="map-section" id="data-hub">
+        <div class="container">
+            <h2 class="section-title">Data Highlights (Egypt)</h2>
+            <p class="section-subtitle">Interactive map, live World Bank pulls, and charts in one place.</p>
+            <div id="nile-map" class="nile-map"></div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card stat-card-1" data-stat="renewable">
+                    <div class="stat-icon">💧</div>
+                    <div class="stat-value" data-target="0" data-unit="m³" data-decimals="0">0</div>
+                    <div class="stat-unit">m³ per capita/year</div>
+                    <div class="stat-year"></div>
+                    <p>Renewable internal freshwater resources per person.</p>
+                </div>
+
+                <div class="stat-card stat-card-2" data-stat="drinking-water">
+                    <div class="stat-icon">🚰</div>
+                    <div class="stat-value" data-target="0" data-unit="%" data-decimals="1">0</div>
+                    <div class="stat-unit">Population with basic drinking water</div>
+                    <div class="stat-year"></div>
+                    <p>Access to at least basic drinking water services.</p>
+                </div>
+
+                <div class="stat-card stat-card-3" data-stat="population">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value" data-target="0" data-unit="M" data-decimals="1">0</div>
+                    <div class="stat-unit">People</div>
+                    <div class="stat-year"></div>
+                    <p>Total population (latest World Bank release).</p>
+                </div>
+            </div>
+
+            <div class="charts-row">
+                <div class="chart-container">
+                    <h4>Water Usage Distribution</h4>
+                    <canvas id="usageChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h4>Water Loss Over Time</h4>
+                    <canvas id="lossChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water-Saving Tips Section -->
+    <section class="awareness-section">
+        <div class="container">
+            <h2 class="section-title">Conservation Tips</h2>
+            <p class="section-subtitle">Simple actions for big impact</p>
+
+            <div class="tips-grid">
+                <div class="tip-card tip-1">
+                    <div class="tip-icon">🚿</div>
+                    <h4>Shorter Showers</h4>
+                    <p>5-minute showers save 12,500 gallons/year per person</p>
+                </div>
+                <div class="tip-card tip-2">
+                    <div class="tip-icon">🚰</div>
+                    <h4>Fix Leaks</h4>
+                    <p>A dripping faucet wastes 3,000 gallons/year</p>
+                </div>
+                <div class="tip-card tip-3">
+                    <div class="tip-icon">🌱</div>
+                    <h4>Smart Watering</h4>
+                    <p>Water plants at dawn/dusk to reduce evaporation</p>
+                </div>
+                <div class="tip-card tip-4">
+                    <div class="tip-icon">🍽️</div>
+                    <h4>Mindful Washing</h4>
+                    <p>Use a basin instead of running water constantly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Countries Explorer Section -->
+    <section class="water-explorer-section mt-5 mb-5">
+        <div class="container">
+            <h2 class="section-title text-white mb-2">Global Water Crisis Explorer</h2>
+            <p class="section-subtitle text-white mb-5">Select a country to see its freshwater availability and usage
+                patterns</p>
+
+            <div class="explorer-wrapper">
+                <!-- Left: Countries organized by category -->
+                <div class="countries-section" id="countriesContainer">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+
+                <!-- Right/Bottom: Data panel for selected country -->
+                <div class="data-panel-wrapper">
+                    <div class="country-data-panel" id="countryDataPanel">
+                        <div class="panel-placeholder">
+                            <div class="placeholder-icon">🌍</div>
+                            <p>Select a country to view its water data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (loaded dynamically via includes.js) -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Leaflet for Maps -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <!-- CountUp.js for Animated Counters -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/learn.js"></script>
+</body>
+
+</html>
