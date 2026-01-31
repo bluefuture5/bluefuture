@@ -1,0 +1,433 @@
+/* ========================================
+   COMMON STYLES - Global Variables & Base Styles
+   استخدام CSS Variables للألوان والقيم الموحدة
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --primary-blue: #0066cc;
+    --primary-aqua: #1E90FF;
+    --secondary-light: #00BFFF;
+    --warning-yellow: #FFDD00;
+    --success-green: #00CC00;
+
+    /* New Color Variables */
+    --color-primary: #0066cc;
+    --color-primary-dark: #003d82;
+    --color-primary-darker: #00509e;
+    --color-accent: #1E90FF;
+    --color-accent-light: #00BFFF;
+    --color-success: #00aa00;
+    --color-text-dark: #1a1a1a;
+    --color-text-light: #666666;
+    --color-light-bg: #f5f7fa;
+
+    /* Dark/Light */
+    --bg-dark: #003d82;
+    --bg-light: #f5f7fa;
+    --text-dark: #1a1a1a;
+    --text-light: #666666;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #0066cc 0%, #003d82 100%);
+    --gradient-dark: linear-gradient(135deg, #0066cc 0%, #00509e 50%, #003d82 100%);
+    --gradient-light: linear-gradient(135deg, #f5f7fa 0%, #fff 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 0.95rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 1.5rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.6s ease;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+/* ========================================
+   CONTAINER & GRID
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-normal);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--gradient-dark);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #00509e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.35);
+}
+
+.btn-secondary {
+    background: #0091d5;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #0066cc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 145, 213, 0.35);
+}
+
+.btn-outline-light {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline-light:hover {
+    background: #fff;
+    color: var(--primary-blue);
+}
+
+.btn-light {
+    background: #fff;
+    color: var(--primary-blue);
+}
+
+.btn-light:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.btn-lg {
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   NAVBAR STYLES (Bootstrap handles navbar structure)
+   ======================================== */
+
+/* Custom navbar styling overrides */
+.navbar {
+    padding: 1rem 6rem !important;
+    background: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    z-index: 1000 !important;
+}
+
+.navbar .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Mobile responsive navbar */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 1rem 1.5rem !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 1rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .donate-link {
+        display: inline-block;
+        margin: 0.5rem auto !important;
+    }
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.brand-text {
+    background: var(--gradient-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Nav link styling */
+.nav-link {
+    font-weight: 500;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+.donate-link {
+    background: var(--gradient-dark);
+    color: #fff !important;
+    border-radius: 10px;
+    padding: 0.65rem 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 144, 255, 0.25);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), opacity var(--transition-normal);
+}
+
+.donate-link::after {
+    display: none;
+}
+
+.donate-link:active,
+.donate-link:focus {
+    color: #fff !important;
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(0, 144, 255, 0.25);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0066cc;
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #0066cc !important;
+}
+
+.donate-link:hover {
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 144, 255, 0.35);
+    opacity: 0.95;
+}
+
+/* ========================================
+   FOOTER STYLES (Bootstrap classes handle layout)
+   ======================================== */
+
+.footer {
+    background: #1a1a1a;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer headings */
+.footer h5 {
+    color: #fff;
+}
+
+/* Footer text styling */
+.footer .text-secondary {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer a {
+    transition: color var(--transition-normal);
+}
+
+.footer .text-secondary a:hover {
+    color: var(--primary-aqua) !important;
+}
+
+/* Social buttons - custom styling */
+.footer .btn-outline-secondary {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .btn-outline-secondary:hover {
+    background: #0066cc;
+    border-color: #0066cc;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Footer divider */
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   SECTION STYLES
+   ======================================== */
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========================================
+   UTILITIES
+   ======================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.py-5 {
+    padding: 3rem 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}

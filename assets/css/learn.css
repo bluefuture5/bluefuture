@@ -1,0 +1,1049 @@
+/* ========================================
+   PAGE HEADER - LEARN PAGE
+   ======================================== */
+
+.page-header {
+    margin-top: 20px;
+    padding: 5.5rem 0 4.5rem;
+    background: linear-gradient(135deg, #0066cc 0%, #00509e 50%, #003d82 100%);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-header h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.page-header p {
+    font-size: 1.08rem;
+    opacity: 0.95;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+/* Wave Divider */
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(152% + 1.3px);
+    height: 110px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #f8f9fa;
+    transition: fill 0.3s ease;
+}
+
+.page-header:hover .shape-fill {
+    fill: #ffffff;
+}
+
+/* ========================================
+   LEARNING HOOK SECTION
+   ======================================== */
+
+.learning-hook {
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+    color: #000;
+    text-align: center;
+}
+
+.hook-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.wave-1,
+.wave-2,
+.wave-3 {
+    position: absolute;
+    opacity: 0.08;
+    border-radius: 50%;
+}
+
+.wave-1 {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    animation: wave 15s ease-in-out infinite;
+}
+
+.wave-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -50px;
+    background: radial-gradient(circle, rgba(30, 144, 255, 0.4) 0%, transparent 70%);
+    animation: wave 20s ease-in-out infinite 2s;
+}
+
+.wave-3 {
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    animation: wave 25s ease-in-out infinite 4s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(180deg);
+    }
+}
+
+.hook-content {
+    position: relative;
+    z-index: 2;
+    animation: slideInUp 0.8s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hook-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    animation: bounce 2.5s ease infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hook-icon.pulse {
+    animation: pulse-icon 2s ease infinite;
+}
+
+@keyframes pulse-icon {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.hook-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
+}
+
+.hook-fact {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    opacity: 0.98;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hook-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.learning-hook .btn-primary {
+    background: #fff;
+    color: #0066cc;
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 1.05rem;
+}
+
+.learning-hook .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.learning-hook .btn-primary:active {
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   LEARNING SECTION - CARDS
+   ======================================== */
+
+.learning-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: slideInDown 0.8s ease;
+}
+
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #1E90FF, #00BFFF);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.learn-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.learn-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1E90FF, #00BFFF);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.learn-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(30, 144, 255, 0.2);
+}
+
+.learn-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-accent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at bottom right, rgba(30, 144, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.card-header {
+    margin-bottom: 2rem;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.learn-card:hover .card-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.learn-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-text-dark);
+    margin: 0;
+    font-weight: 700;
+}
+
+.facts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facts-list li {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.facts-list li:last-child {
+    margin-bottom: 0;
+}
+
+.fact-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #1E90FF, #00BFFF);
+    color: #fff;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-right: 0.7rem;
+    font-size: 0.95rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+.card-1::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.05), transparent);
+    border-radius: 50%;
+}
+
+.card-2::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.05), transparent);
+    border-radius: 50%;
+}
+
+.card-3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, rgba(0, 170, 0, 0.05), transparent);
+    border-radius: 50%;
+}
+
+/* ========================================
+   MAP SECTION (Data)
+   ======================================== */
+
+.map-section {
+    padding: 3rem 0;
+    background: var(--color-light-bg);
+}
+
+.nile-map {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    margin-top: 2rem;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* ========================================
+   STATS SECTION (Data)
+   ======================================== */
+
+.stats-section {
+    background: #fff;
+    padding: 3rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.1), rgba(0, 191, 255, 0.05));
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    border-color: #1E90FF;
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-card:hover::before {
+    left: 100%;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1E90FF, #00BFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.stat-unit {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.charts-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.chart-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.chart-container h4 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-dark);
+}
+
+.chart-container canvas {
+    max-height: 300px;
+}
+
+/* ========================================
+   AWARENESS SECTION - TIPS
+   ======================================== */
+
+.awareness-section {
+    background: var(--gradient-light);
+    padding: 3rem 0;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.tip-1 {
+    border-top-color: #1E90FF;
+}
+
+.tip-2 {
+    border-top-color: #00BFFF;
+}
+
+.tip-3 {
+    border-top-color: #0091d5;
+}
+
+.tip-4 {
+    border-top-color: #0066cc;
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-card h4 {
+    margin-bottom: 0.8rem;
+    color: var(--color-text-dark);
+}
+
+.tip-card p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ========================================
+   WATER EXPLORER SECTION - COUNTRY EXPLORER
+   ======================================== */
+
+.water-explorer-section {
+    background: linear-gradient(135deg, #0066cc 0%, #00509e 50%, #003d82 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.water-explorer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 48%, rgba(30, 144, 255, 0.15) 50%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(0, 191, 255, 0.12) 50%, transparent 52%);
+    background-size: 400px 400px, 350px 350px;
+    background-position: 0 0, 200px 200px;
+    z-index: 1;
+}
+
+.water-explorer-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.water-explorer-section h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.water-explorer-section .section-subtitle {
+    opacity: 0.9;
+}
+
+.explorer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.countries-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.category-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    animation: slideInUp 0.5s ease forwards;
+}
+
+.category-title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.countries-grid-simplified {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.8rem;
+}
+
+.country-btn-simple {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 0.75rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.country-btn-simple .country-flag {
+    font-size: 1.8rem;
+}
+
+.country-btn-simple:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(30, 144, 255, 0.3);
+}
+
+.country-btn-simple:active {
+    transform: translateY(-1px);
+}
+
+.data-panel-wrapper {
+    position: sticky;
+    top: 100px;
+}
+
+.country-data-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+}
+
+.panel-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.data-panel-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.05), rgba(0, 191, 255, 0.05));
+}
+
+.data-panel-title {
+    color: #0066cc;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.country-flag-large {
+    font-size: 2rem;
+}
+
+.water-category-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.data-panel-content {
+    padding: 1.5rem;
+}
+
+.data-metric {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.data-metric:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.metric-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.metric-info {
+    flex: 1;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.3rem;
+}
+
+.metric-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.metric-percentage {
+    margin-top: 0.5rem;
+}
+
+.percentage-bar {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.percentage-fill {
+    height: 100%;
+    transition: width 0.6s ease;
+    border-radius: 3px;
+}
+
+.data-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.mini-metric {
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.08), rgba(0, 191, 255, 0.05));
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(30, 144, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.mini-metric:hover {
+    border-color: #1E90FF;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.15), rgba(0, 191, 255, 0.1));
+    transform: translateY(-2px);
+}
+
+.mini-metric-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mini-metric-label {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.3rem;
+    text-transform: capitalize;
+}
+
+.mini-metric-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0066cc;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .explorer-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .data-panel-wrapper {
+        position: relative;
+        top: auto;
+    }
+
+    .country-data-panel {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .water-explorer-section {
+        padding: 2rem 1rem;
+    }
+
+    .explorer-wrapper {
+        gap: 1.5rem;
+    }
+
+    .countries-grid-simplified {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.6rem;
+    }
+
+    .country-btn-simple {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .country-btn-simple .country-flag {
+        font-size: 1.5rem;
+    }
+
+    .data-panel-title {
+        font-size: 1.2rem;
+    }
+
+    .data-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 0.95rem;
+    }
+
+    .nile-map {
+        height: 350px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.8rem;
+    }
+
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .water-explorer-section {
+        padding: 1.5rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .water-explorer-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .water-explorer-section .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .explorer-wrapper {
+        gap: 1rem;
+    }
+
+    .category-section {
+        padding: 1rem;
+    }
+
+    .category-title {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .countries-grid-simplified {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .country-btn-simple {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.75rem;
+    }
+
+    .country-btn-simple .country-flag {
+        font-size: 1.3rem;
+    }
+
+    .country-data-panel {
+        min-height: 300px;
+    }
+
+    .data-panel-header {
+        padding: 1rem;
+    }
+
+    .data-panel-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .data-panel-content {
+        padding: 1rem;
+    }
+
+    .data-metric {
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .metric-icon {
+        font-size: 1.5rem;
+    }
+
+    .metric-value {
+        font-size: 1.1rem;
+    }
+
+    .data-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .mini-metric {
+        padding: 0.75rem;
+    }
+
+    .mini-metric-icon {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .mini-metric-label {
+        font-size: 0.7rem;
+    }
+
+    .mini-metric-value {
+        font-size: 1.1rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .page-header p {
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}

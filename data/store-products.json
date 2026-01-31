@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "WaterSense Low-Flow Showerhead",
+        "image": "https://m.media-amazon.com/images/I/61pN1SAvk-L._AC_SL1500_.jpg",
+        "price": 29,
+        "waterSaved": 45000,
+        "category": "home",
+        "description": "2.0 GPM EPA WaterSense certified. Saves ~12,000 gallons/year for a family of four (≈45,000 L).",
+        "source": "US EPA WaterSense"
+    },
+    {
+        "id": 2,
+        "name": "Faucet Aerator Pack",
+        "image": "https://m.media-amazon.com/images/I/51B7RORZzcL._AC_SL1195_.jpg",
+        "price": 15,
+        "waterSaved": 26000,
+        "category": "home",
+        "description": "1.5 GPM aerators cut sink use by ~30%. Typical household saves ≈26,000 L/year.",
+        "source": "US EPA WaterSense"
+    },
+    {
+        "id": 3,
+        "name": "Dual-Flush Conversion Kit",
+        "image": "https://m.media-amazon.com/images/I/51LV97qVG0L._AC_.jpg",
+        "price": 39,
+        "waterSaved": 54000,
+        "category": "home",
+        "description": "Converts existing tank to dual-flush. Average savings ≈54,000 L/year per household.",
+        "source": "Alliance for Water Efficiency"
+    },
+    {
+        "id": 4,
+        "name": "Smart Leak Detector",
+        "image": "https://m.media-amazon.com/images/I/51yhodifnDL.jpg",
+        "price": 69,
+        "waterSaved": 11000,
+        "category": "home",
+        "description": "Wi‑Fi leak + freeze alerts. Avoids small leaks that waste ~3,000 gallons/year (≈11,000 L).",
+        "source": "US EPA"
+    },
+    {
+        "id": 5,
+        "name": "Drip Irrigation Starter Kit",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYWJ5stLO-1987B3i4NRKcG1WuHHheV9YhHQ&s",
+        "price": 65,
+        "waterSaved": 150000,
+        "category": "garden",
+        "description": "Delivers water at roots; reduces outdoor use by up to 50%. ≈150,000 L/year for 200 m² garden.",
+        "source": "FAO & EPA estimates"
+    },
+    {
+        "id": 6,
+        "name": "Soil Moisture Sensor Controller",
+        "image": "https://store.fut-electronics.com/cdn/shop/files/SOIL_1024x1024.jpg?v=1695903640",
+        "price": 89,
+        "waterSaved": 50000,
+        "category": "garden",
+        "description": "Skips irrigation when soil is wet. Typical savings ≈50,000 L/season for lawns.",
+        "source": "US EPA WaterSense"
+    },
+    {
+        "id": 7,
+        "name": "Rain Barrel Kit (200L)",
+        "image": "https://m.media-amazon.com/images/I/61AZtJlDuQL._AC_UF350,350_QL80_.jpg",
+        "price": 120,
+        "waterSaved": 20000,
+        "category": "garden",
+        "description": "Harvest rainwater for gardens. 200 L barrel can offset ≈20,000 L/year in many climates.",
+        "source": "USGS Rain Harvesting"
+    },
+    {
+        "id": 8,
+        "name": "Greywater Laundry Diverter",
+        "image": "https://m.media-amazon.com/images/I/41OX9BdOPUL._AC_.jpg",
+        "price": 210,
+        "waterSaved": 90000,
+        "category": "industrial",
+        "description": "Routes washing machine water to irrigation where permitted. Saves ≈90,000 L/year.",
+        "source": "Alliance for Water Efficiency"
+    },
+    {
+        "id": 9,
+        "name": "Pressure-Regulating Valve",
+        "image": "https://m.media-amazon.com/images/I/516H0Tth1dL._AC_SL1000_.jpg",
+        "price": 49,
+        "waterSaved": 30000,
+        "category": "home",
+        "description": "Reduces excessive flow and prevents overwatering in household systems.",
+        "source": "Manufacturer Data"
+    },
+    {
+        "id": 10,
+        "name": "Smart Irrigation Controller",
+        "image": "https://m.media-amazon.com/images/I/4106PvizVJL._AC_SR290,290_.jpg",
+        "price": 149,
+        "waterSaved": 120000,
+        "category": "garden",
+        "description": "Weather-aware irrigation scheduling for lawns and gardens.",
+        "source": "Irrigation Assoc. Studies"
+    },
+    {
+        "id": 11,
+        "name": "Mulch Pack (50m²)",
+        "image": "https://m.media-amazon.com/images/I/61ta9KyR1RL._AC_.jpg",
+        "price": 35,
+        "waterSaved": 25000,
+        "category": "garden",
+        "description": "Organic mulch reduces evaporation and maintains soil moisture.",
+        "source": "Agronomy Reports"
+    },
+    {
+        "id": 12,
+        "name": "Efficient Sprinkler Heads (10x)",
+        "image": "https://shoppick.com.au/cdn/shop/products/R09_01dac7d7-2ebd-4d2c-ad7d-15a3f2ba0bfa_800x.jpg?v=1524966459",
+        "price": 95,
+        "waterSaved": 40000,
+        "category": "garden",
+        "description": "Low-drift, efficient spray patterns to cut outdoor water waste.",
+        "source": "Irrigation Assoc."
+    }
+]
